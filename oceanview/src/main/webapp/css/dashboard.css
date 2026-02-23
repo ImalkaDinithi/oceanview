@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.navbar {
+	background-color: #2c3e50;
+	padding: 8px;
+	width: 85%;
+}
+
+.navbar a {
+	color: white;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.topbar {
+	margin-bottom: 30px;
+	padding: 15px;
+}
+
+.topbar h1 {
+	font-size: 28px;
+	color: #1e293b;
+}
+
+.card {
+	background: white;
+	width: 85%;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 8px;
+}
