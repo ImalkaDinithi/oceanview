@@ -12,6 +12,9 @@
 	<body>
 
 		<%@ include file="../common/navbar.jsp" %>
+		<%@ page import="java.util.List" %>
+		<%@ page import="com.icbt.model.Reservation" %>
+		<%@ page import="com.icbt.dao.ReservationDAO" %>
 
 			<div class="container">
 				<div class="table-card">
@@ -26,7 +29,24 @@
 							</tr>
 						</thead>
 						<tbody>
-							<!-- Data will come from backend later -->
+
+						<%
+    						ReservationDAO dao = new ReservationDAO();
+    						List<Reservation> reservations = dao.getAllReservations();
+
+    						for (Reservation r : reservations) {
+						%>
+
+						<tr>
+    						<td><%= r.getReservationNo() %></td>
+    						<td><%= r.getGuestName() %></td>
+    						<td><%= r.getRoomType() %></td>
+						</tr>
+
+						<%
+   							 }
+						%>
+
 						</tbody>
 					</table>
 				</div>

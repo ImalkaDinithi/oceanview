@@ -16,8 +16,14 @@
 			<div class="container">
 				<div class="form-card">
 					<h2>Add New Reservation</h2>
+					
+					<% if (request.getAttribute("successMessage") != null) { %>
+        				<div class="success-message">
+           	 				<%= request.getAttribute("successMessage") %>
+        				</div>
+    				<% } %>
 
-					<form action="../ReservationController" method="post" class="reservation-form">
+					<form action="../ReservationServlet" method="post" class="reservation-form">
 
 						<div class="form-group">
 							<label>Reservation No</label>
