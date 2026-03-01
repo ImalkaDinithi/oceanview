@@ -18,7 +18,7 @@
 				<div class="bill-card">
 					<h2>Calculate Bill</h2>
 
-					<form action="../BillController" method="post" class="bill-form">
+					<form action="../BillServlet" method="post" class="bill-form">
 
 						<div class="form-group">
 							<label>Reservation Number</label>
