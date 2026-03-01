@@ -47,8 +47,13 @@
 						</div>
 
 						<div class="form-group">
-							<label>Room Type</label>
-							<input type="text" name="roomType" required>
+    						<label>Room Type</label>
+    						<select name="roomType" required class="form-control">
+        						<option value="">-- Select Room Type --</option>
+        						<option value="Standard">Standard</option>
+        						<option value="Deluxe">Deluxe</option>
+        						<option value="Suite">Suite</option>
+    						</select>
 						</div>
 
 						<div class="form-group">
