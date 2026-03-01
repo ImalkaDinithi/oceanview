@@ -11,16 +11,17 @@ public class ReservationDAO {
 
         try (Connection con = DBConnection.getConnection()) {
 
-            String sql = "INSERT INTO reservations (reservation_no, guest_name, contact, room_type, check_in, check_out) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO reservations (reservation_no, guest_name, address, contact, room_type, check_in, check_out) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
             PreparedStatement ps = con.prepareStatement(sql);
 
             ps.setString(1, reservation.getReservationNo());
             ps.setString(2, reservation.getGuestName());
-            ps.setString(3, reservation.getContact());
-            ps.setString(4, reservation.getRoomType());
-            ps.setString(5, reservation.getCheckIn());
-            ps.setString(6, reservation.getCheckOut());
+            ps.setString(3, reservation.getAddress());
+            ps.setString(4, reservation.getContact());
+            ps.setString(5, reservation.getRoomType());
+            ps.setString(6, reservation.getCheckIn());
+            ps.setString(7, reservation.getCheckOut());
 
             ps.executeUpdate();
 

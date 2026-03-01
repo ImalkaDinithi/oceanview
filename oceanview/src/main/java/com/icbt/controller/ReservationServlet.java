@@ -23,6 +23,7 @@ public class ReservationServlet extends HttpServlet {
         // Get form data
         String reservationNo = request.getParameter("reservationNo");
         String guestName = request.getParameter("guestName");
+        String address = request.getParameter("address");
         String contact = request.getParameter("contact");
         String roomType = request.getParameter("roomType");
         String checkIn = request.getParameter("checkIn");
@@ -32,6 +33,7 @@ public class ReservationServlet extends HttpServlet {
         Reservation reservation = new Reservation();
         reservation.setReservationNo(reservationNo);
         reservation.setGuestName(guestName);
+        reservation.setAddress(address);
         reservation.setContact(contact);
         reservation.setRoomType(roomType);
         reservation.setCheckIn(checkIn);

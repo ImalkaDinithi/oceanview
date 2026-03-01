@@ -5,6 +5,7 @@ public class Reservation {
     private int id;
     private String reservationNo;
     private String guestName;
+    private String address;
     private String contact;
     private String roomType;
     private String checkIn;
@@ -15,10 +16,11 @@ public class Reservation {
     }
 
     // Constructor without ID
-    public Reservation(String reservationNo, String guestName, String contact,
+    public Reservation(String reservationNo, String guestName, String address, String contact,
                        String roomType, String checkIn, String checkOut) {
         this.reservationNo = reservationNo;
         this.guestName = guestName;
+        this.address = address;
         this.contact = contact;
         this.roomType = roomType;
         this.checkIn = checkIn;
@@ -51,6 +53,15 @@ public class Reservation {
 
     public void setGuestName(String guestName) {
         this.guestName = guestName;
+    }
+    
+    
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 
