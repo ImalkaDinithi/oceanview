@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<title>View Reservations</title>
 		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/dashboard.css">
 		<link rel="stylesheet" href="../css/viewReservation.css">
 	</head>
 

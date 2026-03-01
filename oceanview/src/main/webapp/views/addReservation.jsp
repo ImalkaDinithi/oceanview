@@ -5,8 +5,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Add Reservation</title>
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="../css/addReservation.css">
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/css/style.css">
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/css/dashboard.css">
+    	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/addReservation.css">				
 	</head>
 
 	<body>
@@ -33,6 +34,11 @@
 						<div class="form-group">
 							<label>Guest Name</label>
 							<input type="text" name="guestName" required>
+						</div>
+						
+						<div class="form-group">
+							<label>Address</label>
+							<input type="text" name="address" required>
 						</div>
 
 						<div class="form-group">
