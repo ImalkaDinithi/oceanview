@@ -19,7 +19,7 @@
         <!-- Header -->
         <div class="invoice-header">
             <div class="logo-section">
-                <img src="../images/logo.png" alt="Ocean View Resort Logo" class="logo">
+                <img src="<%=request.getContextPath()%>/images/logo.jpg" alt="Ocean View Resort Logo" class="logo">
                 <h1>Ocean View Resort</h1>
                 <p>Beach Road, Galle, Sri Lanka</p>
                 <p>Phone: +94 91 123 4567</p>
