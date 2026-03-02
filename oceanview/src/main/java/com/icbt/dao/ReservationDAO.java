@@ -44,7 +44,11 @@ public class ReservationDAO {
                 Reservation r = new Reservation();
                 r.setReservationNo(rs.getString("reservation_no"));
                 r.setGuestName(rs.getString("guest_name"));
+                r.setAddress(rs.getString("address"));
+                r.setContact(rs.getString("contact"));
                 r.setRoomType(rs.getString("room_type"));
+                r.setCheckIn(rs.getString("check_in"));
+                r.setCheckOut(rs.getString("check_out"));
                 list.add(r);
             }
 

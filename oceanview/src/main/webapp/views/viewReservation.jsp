@@ -25,8 +25,12 @@
 						<thead>
 							<tr>
 								<th>Reservation No</th>
-								<th>Guest Name</th>
-								<th>Room Type</th>
+            					<th>Guest Name</th>
+            					<th>Address</th>
+            					<th>Contact</th>
+            					<th>Room Type</th>
+            					<th>Check In</th>
+            					<th>Check Out</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -40,8 +44,12 @@
 
 						<tr>
     						<td><%= r.getReservationNo() %></td>
-    						<td><%= r.getGuestName() %></td>
-    						<td><%= r.getRoomType() %></td>
+        					<td><%= r.getGuestName() %></td>
+        					<td><%= r.getAddress() %></td>
+        					<td><%= r.getContact() %></td>
+        					<td><%= r.getRoomType() %></td>
+        					<td><%= r.getCheckIn() %></td>
+        					<td><%= r.getCheckOut() %></td>
 						</tr>
 
 						<%
