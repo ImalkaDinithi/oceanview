@@ -26,6 +26,18 @@
 		<description></description>
 		<servlet-class>com.icbt.controller.LogoutServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>UpdateReservationServlet</servlet-name>
+		<display-name>UpdateReservationServlet</display-name>
+		<description></description>
+		<servlet-class>com.icbt.controller.UpdateReservationServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteReservationServlet</servlet-name>
+		<display-name>DeleteReservationServlet</display-name>
+		<description></description>
+		<servlet-class>com.icbt.controller.DeleteReservationServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/LoginServlet</url-pattern>
@@ -41,5 +53,13 @@
 	<servlet-mapping>
 		<servlet-name>LogoutServlet</servlet-name>
 		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateReservationServlet</servlet-name>
+		<url-pattern>/UpdateReservationServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteReservationServlet</servlet-name>
+		<url-pattern>/DeleteReservationServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

@@ -60,3 +60,38 @@
 .table-card::-webkit-scrollbar {
     height: 8px;
 }
+
+/* Action Buttons */
+.action-buttons {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn-icon {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 6px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+/* Update */
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Delete */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

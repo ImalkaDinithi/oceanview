@@ -11,6 +11,20 @@
 	</head>
 
 	<body>
+	
+	<%
+    String message = (String) session.getAttribute("successMessage");
+    if (message != null) {
+	%>
+
+	<script>
+    	alert("<%= message %>");
+	</script>
+
+	<%
+        session.removeAttribute("successMessage"); // remove after showing
+    	}
+	%>
 
 		<%@ include file="../common/navbar.jsp" %>
 		<%@ page import="java.util.List" %>
@@ -31,6 +45,7 @@
             					<th>Room Type</th>
             					<th>Check In</th>
             					<th>Check Out</th>
+            					<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -50,6 +65,23 @@
         					<td><%= r.getRoomType() %></td>
         					<td><%= r.getCheckIn() %></td>
         					<td><%= r.getCheckOut() %></td>
+        					<td class="action-buttons">
+
+    							<!-- Update Button -->
+    							<a href="<%=request.getContextPath()%>/views/updateReservation.jsp?id=<%= r.getReservationNo() %>" 
+       							class="btn-icon edit-btn" title="Update">
+        						✏️
+    							</a>
+
+    							<!-- Delete Button -->
+    							<a href="<%=request.getContextPath()%>/deleteReservation?id=<%= r.getReservationNo() %>" 
+       							class="btn-icon delete-btn" 
+       							onclick="return confirm('Are you sure you want to delete this reservation?');"
+       							title="Delete">
+        						🗑️
+    							</a>
+
+							</td>
 						</tr>
 
 						<%
