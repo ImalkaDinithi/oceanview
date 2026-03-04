@@ -10,40 +10,41 @@
 
 	<body>
 
-		<%@ include file="../common/navbar.jsp" %>
+<%@ include file="../common/navbar.jsp" %>
 
-			<!-- Main Content -->
-			<main class="main-content">
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="role-badge">STAFF</span>
+        <h1>Welcome!</h1>
+        <p>Ocean View Resort • Staff Dashboard</p>
+    </div>
+</section>
 
-				<header class="topbar">
-					<h1>OceanView Reservation Dashboard</h1>
-				</header>
+<!-- Dashboard Cards -->
+<section class="stats-section">
 
-				<section class="cards">
+    <div class="stat-card">
+        <h2>60</h2>
+        <p>Available Rooms</p>
+    </div>
 
-					<div class="card">
-						<h3>Total Reservations</h3>
-						<p>125</p>
-					</div>
+    <div class="stat-card">
+        <h2>0</h2>
+        <p>Checked In</p>
+    </div>
 
-					<div class="card">
-						<h3>Today's Bookings</h3>
-						<p>18</p>
-					</div>
+    <div class="stat-card">
+        <h2>0</h2>
+        <p>Today's Check-ins</p>
+    </div>
 
-					<div class="card">
-						<h3>Pending Payments</h3>
-						<p>7</p>
-					</div>
+    <div class="stat-card">
+        <h2>0</h2>
+        <p>Today's Check-outs</p>
+    </div>
 
-				</section>
+</section>
 
-				<section class="welcome-section">
-					<img src="<%=request.getContextPath()%>/images/hotel.jpg" alt="Ocean View" class="dashboard-image">
-				</section>
-
-			</main>
-
-	</body>
-
-	</html>
+</body>
+</html>
