@@ -6,7 +6,7 @@
 
 <html>
 <head>
-<title>Invoice</title>
+<title>Bill Result</title>
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/style.css">
 <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bill.css">
 </head>
@@ -22,12 +22,12 @@
                 <img src="<%=request.getContextPath()%>/images/logo.jpg" alt="Ocean View Resort Logo" class="logo">
                 <h1>Ocean View Resort</h1>
                 <p>Beach Road, Galle, Sri Lanka</p>
-                <p>Phone: +94 91 123 4567</p>
+                <p>Phone: +94 71 123 4567</p>
             </div>
 
             <div class="invoice-info">
                 <h2>INVOICE</h2>
-                <p><strong>Invoice Date:</strong> <%= LocalDate.now() %></p>
+                <p><strong>Date:</strong> <%= LocalDate.now() %></p>
                 <p><strong>Reservation No:</strong> <%= bill.getReservationNo() %></p>
             </div>
         </div>
