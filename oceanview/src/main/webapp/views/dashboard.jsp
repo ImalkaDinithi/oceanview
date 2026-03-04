@@ -25,13 +25,13 @@
 <section class="stats-section">
 
     <div class="stat-card">
-        <h2>60</h2>
-        <p>Available Rooms</p>
+        <h2>80</h2>
+        <p>Total Rooms</p>
     </div>
 
     <div class="stat-card">
-        <h2>0</h2>
-        <p>Checked In</p>
+        <h2>50</h2>
+        <p>Available Rooms</p>
     </div>
 
     <div class="stat-card">

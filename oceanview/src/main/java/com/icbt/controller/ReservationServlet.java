@@ -2,6 +2,8 @@ package com.icbt.controller;
 
 
 import java.io.IOException;
+import java.time.LocalDate;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +23,7 @@ public class ReservationServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // Get form data
-        String reservationNo = request.getParameter("reservationNo");
+    	String reservationNo = request.getParameter("reservationNo");
         String guestName = request.getParameter("guestName");
         String address = request.getParameter("address");
         String contact = request.getParameter("contact");
@@ -29,7 +31,31 @@ public class ReservationServlet extends HttpServlet {
         String checkIn = request.getParameter("checkIn");
         String checkOut = request.getParameter("checkOut");
 
-        // Create Reservation object
+        // ✅ Convert to LocalDate for comparison
+        LocalDate checkInDate = LocalDate.parse(checkIn);
+        LocalDate checkOutDate = LocalDate.parse(checkOut);
+
+        // ✅ VALIDATION
+        if (checkOutDate.isBefore(checkInDate)) {
+
+            request.setAttribute("errorMessage",
+                    "Check-Out date cannot be before Check-In date!");
+
+            // Keep form values
+            request.setAttribute("reservationNo", reservationNo);
+            request.setAttribute("guestName", guestName);
+            request.setAttribute("address", address);
+            request.setAttribute("contact", contact);
+            request.setAttribute("roomType", roomType);
+            request.setAttribute("checkIn", checkIn);
+            request.setAttribute("checkOut", checkOut);
+
+            request.getRequestDispatcher("views/addReservation.jsp")
+                   .forward(request, response);
+            return;
+        }
+
+        // ✅ If valid → Save
         Reservation reservation = new Reservation();
         reservation.setReservationNo(reservationNo);
         reservation.setGuestName(guestName);
@@ -39,10 +65,8 @@ public class ReservationServlet extends HttpServlet {
         reservation.setCheckIn(checkIn);
         reservation.setCheckOut(checkOut);
 
-        // Save using service
         reservationService.addReservation(reservation);
 
-        // Send success message
         request.setAttribute("successMessage", "Reservation Added Successfully!");
         request.getRequestDispatcher("views/addReservation.jsp")
                .forward(request, response);
