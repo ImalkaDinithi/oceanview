@@ -9,26 +9,33 @@
 
 /* Card */
 .help-card {
-	background: white;
-	padding: 30px 40px;
-	width: 500px;
-	border-radius: 10px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    padding: 35px 40px;
+    width: 800px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* Heading */
 .help-card h2 {
-	text-align: center;
-	margin-bottom: 25px;
-	color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
 }
 
-/* Steps List */
-.help-steps {
-	font-size: 15px;
-	line-height: 1.7;
-	color: #34495e;
-	padding-left: 20px;
+.help-card h3 {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+.help-card ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.help-card li {
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 /* Highlight menu names */
