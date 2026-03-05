@@ -10,37 +10,46 @@
 <head>
 <meta charset="UTF-8">
 <title>Update Reservation</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/dashboard.css">
-<link rel="stylesheet" href="../css/form.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/style.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/dashboard.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/form.css">
 </head>
 <body>
-	<h2>Update Reservation</h2>
+	<body>
 
-<form action="<%=request.getContextPath()%>/updateReservation" method="post">
+<div class="container-form">
+    <div class="form-card">
 
-    <input type="hidden" name="reservationNo" value="<%= r.getReservationNo() %>">
+        <h2>Update Reservation</h2>
 
-    Guest Name:
-    <input type="text" name="guestName" value="<%= r.getGuestName() %>"><br><br>
+        <form action="<%=request.getContextPath()%>/updateReservation" method="post">
 
-    Address:
-    <input type="text" name="address" value="<%= r.getAddress() %>"><br><br>
+            <input type="hidden" name="reservationNo" value="<%= r.getReservationNo() %>">
 
-    Contact:
-    <input type="text" name="contact" value="<%= r.getContact() %>"><br><br>
+            <label>Guest Name</label>
+            <input type="text" name="guestName" value="<%= r.getGuestName() %>" required>
 
-    Room Type:
-    <input type="text" name="roomType" value="<%= r.getRoomType() %>"><br><br>
+            <label>Address</label>
+            <input type="text" name="address" value="<%= r.getAddress() %>" required>
 
-    Check In:
-    <input type="date" name="checkIn" value="<%= r.getCheckIn() %>"><br><br>
+            <label>Contact</label>
+            <input type="text" name="contact" value="<%= r.getContact() %>" required>
 
-    Check Out:
-    <input type="date" name="checkOut" value="<%= r.getCheckOut() %>"><br><br>
+            <label>Room Type</label>
+            <input type="text" name="roomType" value="<%= r.getRoomType() %>" required>
 
-    <button type="submit">Update</button>
+            <label>Check In</label>
+            <input type="date" name="checkIn" value="<%= r.getCheckIn() %>" required>
 
-</form>
+            <label>Check Out</label>
+            <input type="date" name="checkOut" value="<%= r.getCheckOut() %>" required>
+
+            <button type="submit">Update Reservation</button>
+
+        </form>
+
+    </div>
+</div>
+
 </body>
 </html>
